@@ -25,6 +25,7 @@ jobs:
         run: npm test
 
   deploy:
+    needs: build-test
     runs-on: ubuntu-latest
     permissions:
       contents: read
