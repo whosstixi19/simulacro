@@ -24,7 +24,7 @@ test('GET /health responde 200 y status ok', async () => {
   const app = createApp();
   const server = await startServer(app);
   const res = await get(server, '/health');
-  assert.strictEqual(res.status, 404);
+  assert.strictEqual(res.status, 200);
   assert.strictEqual(JSON.parse(res.body).status, 'ok');
   server.close();
 });
