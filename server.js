@@ -40,8 +40,6 @@ function createApp() {
 if (require.main === module) {
   const app = createApp();
   const PORT = process.env.PORT || 3000;
-  // ponytail: bug intencional — bind a 127.0.0.1, solo accesible dentro del contenedor
-  // app.listen(PORT, '127.0.0.1', () => {
   app.listen(PORT, '0.0.0.0', () => {
     console.log('Servidor escuchando en puerto ' + PORT + ' (version=' + APP_VERSION + ', color=' + APP_COLOR + ')');
   });
